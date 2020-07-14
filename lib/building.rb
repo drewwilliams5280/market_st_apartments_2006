@@ -10,6 +10,10 @@ class Building
 
   def add_unit(unit)
     @units << unit
-  end 
+  end
+
+  def renters
+    @units.map {|unit| unit.renter.name}
+  end
 
 end
