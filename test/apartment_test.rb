@@ -20,4 +20,12 @@ class ApartmentTest < Minitest::Test
     assert_equal 1, unit1.bedrooms
   end
 
+  def test_it_can_add_renter
+    unit1 = Apartment.new("A1", 1200, 1, 1)
+    renter1 = Renter.new("Jessie")
+    unit1.add_renter(renter1)
+
+    assert_equal renter1, unit1.renter
+  end
+
 end
